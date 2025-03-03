@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amol & Mia's Wedding</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f9f7f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: url('./images/banner.webp?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+        
+        .date {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            font-weight: 300;
+            color: #9a8478;
+        }
+        
+        /* Welcome Section */
+        .welcome {
+            text-align: center;
+            background-color: #fff;
+        }
+        
+        .welcome p {
+            max-width: 800px;
+            margin: 0 auto 30px;
+            font-size: 1.2rem;
+        }
+        
+        /* Schedule Section */
+        .schedule {
+            background-color: #f9f7f5;
+        }
+        
+        .timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 2px;
+            background-color: #d4c1b7;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .event {
+            margin-bottom: 50px;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .event-time {
+            width: 45%;
+            text-align: right;
+            padding-right: 30px;
+        }
+        
+        .event-details {
+            width: 45%;
+            padding-left: 30px;
+        }
+        
+        .event::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #d4c1b7;
+            border-radius: 50%;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+        }
+        
+        .event h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #9a8478;
+        }
+        
+        .event p {
+            font-size: 1.1rem;
+        }
+        
+        /* Gallery Section */
+        .gallery {
+            background-color: #fff;
+        }
+        
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .photo-item {
+            height: 300px;
+            overflow: hidden;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .photo-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #9a8478;
+            color: #fff;
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        footer p {
+            font-size: 1.1rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3rem;
+            }
+            
+            .date {
+                font-size: 1.5rem;
+            }
+            
+            .timeline::before {
+                left: 30px;
+            }
+            
+            .event {
+                flex-direction: column;
+            }
+            
+            .event::before {
+                left: 30px;
+            }
+            
+            .event-time, .event-details {
+                width: 100%;
+                text-align: left;
+                padding-left: 60px;
+                padding-right: 0;
+            }
+            
+            .photo-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Amol & Mia</h1>
+            <p class="date">June 15, 2025</p>
+            <p>We're getting married!</p>
+        </div>
+    </header>
+
+    <section class="welcome">
+        <div class="container">
+            <h2 class="section-title">Our Special Day</h2>
+            <p>
+                We are thrilled to celebrate our love and commitment with our closest friends and family.
+                Thank you for being part of our journey and sharing in our happiness on this special day.
+            </p>
+            <p>
+                The shaadi will be held at The Merion,
+                1301-US-130, Cinnaminson, NJ, 08077.
+            </p>
+        </div>
+    </section>
+
+    <section class="schedule">
+        <div class="container">
+            <h2 class="section-title">Schedule of Events</h2>
+            <div class="timeline">
+                <div class="event">
+                    <div class="event-time">
+                        <h3>12:00 PM</h3>
+                    </div>
+                    <div class="event-details">
+                        <h3>Guest Arrival</h3>
+                        <p>Welcome drinks will be served</p>
+                    </div>
+                </div>
+                
+                <div class="event">
+                    <div class="event-time">
+                        <h3>1:00 PM</h3>
+                    </div>
+                    <div class="event-details">
+                        <h3>Ceremony</h3>
+                        <p>Garden Pavilion</p>
+                    </div>
+                </div>
+                
+                <div class="event">
+                    <div class="event-time">
+                        <h3>5:00 PM</h3>
+                    </div>
+                    <div class="event-details">
+                        <h3>Cocktail Hour</h3>
+                        <p>Terrace Lounge</p>
+                    </div>
+                </div>
+                
+                <div class="event">
+                    <div class="event-time">
+                        <h3>6:00 PM</h3>
+                    </div>
+                    <div class="event-details">
+                        <h3>Dinner Reception</h3>
+                        <p>Grand Ballroom</p>
+                    </div>
+                </div>
+                
+                <div class="event">
+                    <div class="event-time">
+                        <h3>8:00 PM</h3>
+                    </div>
+                    <div class="event-details">
+                        <h3>Dancing</h3>
+                        <p>Let's celebrate!</p>
+                    </div>
+                </div>
+                
+                <div class="event">
+                    <div class="event-time">
+                        <h3>11:00 PM</h3>
+                    </div>
+                    <div class="event-details">
+                        <h3>Farewell</h3>
+                        <p>Thank you for sharing our special day</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <div class="container">
+            <h2 class="section-title">Our Gallery</h2>
+            <div class="photo-grid">
+                <div class="photo-item">
+                    <img src="images/32b64f82-ef5c-4386-98bc-96a22e644bea~rt_auto-cr_0.0.1600.1200-rs_1600.webp" alt="Couple Photo 1">
+                </div>
+                <div class="photo-item">
+                    <img src="images/4aa98f30-1306-44ca-92b7-31727b885cb8~rt_auto-cr_0.0.1244.933-rs_1244.webp" alt="Couple Photo 2">
+                </div>
+                <div class="photo-item">
+                    <img src="images/64500426-4a41-4512-b6d3-2e7850115d32~rt_auto-cr_0.0.1244.933-rs_1244.webp" alt="Couple Photo 3">
+                </div>
+                <div class="photo-item">
+                    <img src="images/688e1589-e4b9-4725-b88c-97703e2a7a08~rt_auto-cr_50.617.1463.2500-rs_1413.webp" alt="Couple Photo 4">
+                </div>
+                <div class="photo-item">
+                    <img src="images/6d59a58f-c216-4196-85b3-acea4bf4696f~rt_auto-cr_0.0.1244.933-rs_1244.webp" alt="Couple Photo 5">
+                </div>
+                <div class="photo-item">
+                    <img src="images/79427966-6d10-42d8-b83b-0afdb99d9ac9~rt_auto-cr_0.0.1239.933-rs_1239.webp" alt="Couple Photo 6">
+                </div>
+                <div class="photo-item">
+                    <img src="images/d0dfd1fb-56f1-43df-9c71-da3b1eb26526~rt_auto-cr_0.0.1244.933-rs_1244.webp" alt="Couple Photo 7">
+                </div>
+                <div class="photo-item">
+                    <img src="images/03d47605-c30b-42a9-8ab9-cf812daaea2a~rt_auto-cr_0.0.1239.933-rs_1239.webp" alt="Couple Photo 8">
+                </div>
+                <div class="photo-item">
+                    <img src="images/dfd460e1-1d27-4179-aa38-091766cc6417~rt_auto-cr_0.0.1244.933-rs_1244.webp" alt="Couple Photo 9">
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Amol & Mia | June 15, 2025 | The Merion</p>
+        </div>
+
+    </footer>
+</body>
+</html>
+
